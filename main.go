@@ -1,9 +1,10 @@
 package main
 
 import (
+	"fmt"
+	"github.com/joho/godotenv"
+	"go-rest-api-mysql/queries"
 	"net/http"
-
-	"queries"
 
 	"github.com/gin-gonic/gin"
 )
@@ -16,10 +17,15 @@ type Album struct {
 }
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
 	router := gin.Default()
 	router.GET("/albums", getAlbums)
 
-	router.Run("localhost:8080")
+	router.Run("localhost:300")
 }
 
 func getAlbums(c *gin.Context) {
