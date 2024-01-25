@@ -22,7 +22,7 @@ func startConnection() {
 	}
 
 	var err error
-	db, err := sql.Open("mysql", cfg.FormatDSN())
+	db, err = sql.Open("mysql", cfg.FormatDSN())
 
 	if err != nil {
 		fmt.Print("chales")
