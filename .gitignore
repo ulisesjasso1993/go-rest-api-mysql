@@ -21,3 +21,7 @@
 go.work
 
 .idea
+
+# enviroment vars
+.env.local
+.env

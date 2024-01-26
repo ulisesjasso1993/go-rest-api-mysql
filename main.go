@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/joho/godotenv"
 	"go-rest-api-mysql/queries"
 	"net/http"
+
+	"github.com/joho/godotenv"
 
 	"github.com/gin-gonic/gin"
 )
@@ -17,7 +18,7 @@ type Album struct {
 }
 
 func main() {
-	err := godotenv.Load()
+	err := godotenv.Load(".env.local")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
