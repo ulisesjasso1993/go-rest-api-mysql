@@ -1,8 +1,12 @@
-module main
+module go-rest-api-mysql
 
 go 1.21.6
 
-require github.com/gin-gonic/gin v1.9.1
+require (
+	github.com/gin-gonic/gin v1.9.1
+	github.com/go-sql-driver/mysql v1.7.1
+	github.com/joho/godotenv v1.5.1
+)
 
 require (
 	github.com/bytedance/sonic v1.9.1 // indirect
@@ -30,5 +34,3 @@ require (
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
-
-replace queries => ../queries

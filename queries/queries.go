@@ -3,8 +3,7 @@ package queries
 import (
 	"database/sql"
 	"fmt"
-
-	"connector"
+	"go-rest-api-mysql/connector"
 )
 
 type Album struct {
